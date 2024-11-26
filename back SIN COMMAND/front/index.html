@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Remoto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Control Remoto</h2>
+
+        <section>
+            <h3>TV</h3>
+            <button onclick="sendCommand('/tv/on')">Encender TV</button>
+            <button onclick="sendCommand('/tv/off')">Apagar TV</button>
+            <button onclick="sendCommand('/tv/volume/up')">Subir Volumen</button>
+            <button onclick="sendCommand('/tv/volume/down')">Bajar Volumen</button>
+        </section>
+
+        <section>
+            <h3>Sistema de Sonido</h3>
+            <button onclick="sendCommand('/sound/on')">Encender Sistema</button>
+            <button onclick="sendCommand('/sound/volume/up')">Subir Volumen</button>
+        </section>
+
+        <section>
+            <h3>Luz</h3>
+            <button onclick="sendCommand('/light/on')">Encender Luz</button>
+            <button onclick="sendCommand('/light/off')">Apagar Luz</button>
+        </section>
+
+        <section>
+            <h3>Ventilador</h3>
+            <button onclick="sendCommand('/fan/on')">Encender Ventilador</button>
+            <button onclick="sendCommand('/fan/speed/high')">Velocidad Alta</button>
+            <button onclick="sendCommand('/fan/speed/low')">Velocidad Baja</button>
+        </section>
+
+        <section>
+            <h3>Acción General</h3>
+            <button onclick="sendCommand('/undo')">Deshacer</button>
+        </section>
+
+
+    </div>
+
+    <div class="container">
+        <div id="response">
+            <h3>Respuesta:</h3>
+            <pre id="output">Ninguna acción aún</pre>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
